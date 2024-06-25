@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Multiple Maps Example</title>
+		<script src="usmap.js"></script>
+		<script src="mapdata1.js"></script>
+		<script type='text/javascript'>	
+		var map1=simplemaps_usmap.create();
+		</script>
+		<script src="mapdata2.js"></script>
+		<script>
+		var map2=simplemaps_usmap.create();
+		</script>
+		<script type='text/javascript'>	
+		function make_idaho_green(){
+			map1.mapdata.state_specific.ID.color='green';
+			map1.refresh();
+		}
+		</script>
+		
+	</head>
+    <body>
+		<h1>Map 1</h1>
+		<div id="map1"></div>
+		<p><a href="#" onclick="make_idaho_green()">Make Idaho Green</a></p>		
+		<h1>Map 2</h1>	
+		<div id="map2"></div>
+		<p>See the <a href="http://simplemaps.com/docs/multiple-maps">full tutorial</a> for more details</p>
+	</body>
+</html>
+      
+    
+
